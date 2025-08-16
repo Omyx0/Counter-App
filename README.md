@@ -29,8 +29,8 @@ Additionally, the app features a **modern UI** with gradient styling and a **foo
 ---
 
 ## 🔗 Links
-- **GitHub Repository**: [Add your repo link here]  
-- **Live Demo (Netlify/Vercel)**: [Add deployed link here]
+- **GitHub Repository**: https://github.com/Omyx0/Counter-App
+- **Live Demo (Vercel)**: https://prxteek-counter-app.vercel.app/
 
 ---
 
