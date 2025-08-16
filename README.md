@@ -97,12 +97,12 @@ Additionally, the app features a **modern UI** with gradient styling and a **foo
 
 ---
 
-## Screenshots  
+## Screenshots
 
-### App Interface  
-![Counter App Screenshot1](./assets/Screenshot1.png)
-![Counter App Screenshot2](./assets/Screenshot2.png)
-![Counter App Screenshot3](./assets/Screenshot3.png)
+![Home Page](./ss1.png)
+![Counter Display](./ss2.png)
+![Footer Section](./ss3.png)
+
 
 ---
 
