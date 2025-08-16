@@ -1,38 +1,413 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, rgb(112, 146, 246), rgb(22, 31, 201));
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  min-height: 100vh;
+}
+
+.heading-box {
+  display: inline-block;
+  padding: 20px 40px;
+  background: rgba(33, 22, 255, 0.303);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 6em;
+  background: linear-gradient(180deg, rgb(4, 10, 42), rgb(0, 5, 137));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin: 0;
+}
+
 .App {
   text-align: center;
+  justify-content: center;
+  background: rgb(42, 58, 203);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.611);
+  width: 300px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.display {
+  margin: 20px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, rgb(136, 166, 255), rgb(98, 100, 243));
+  border-radius: 10px;
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.Button {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.btn {
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.inc {
+  background-color: #4CAF50;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.reset {
+  background-color: #f0ad4e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.dec {
+  background-color: #d9534f;
+  color: white;
+}
+
+.btn:hover,
+.reset:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active,
+.reset:active {
+  transform: scale(0.95);
+}
+
+button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+}
+
+button:disabled:hover {
+  transform: none;
+}
+
+.bounds {
+  padding: 8px 10px;
+  margin: 20px 0;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(135deg, rgb(136, 166, 255), rgb(166, 167, 212));
+  border-radius: 8px;
+  width: 100px;
+  font-size: 1rem;
+  border: none;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.bounds-inputs {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.steps-input {
+  padding: 8px 10px;
+  margin-top: 20px;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(135deg, rgb(136, 166, 255), rgb(166, 167, 212));
+  border: 2px solid rgb(43, 146, 209);
+  border-radius: 8px;
+  width: 100px;
+  font-size: 1.2rem;
+  text-align: center;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.steps-input:hover {
+  border-color: rgb(0, 53, 211);
+  box-shadow: 0 0 5px rgba(0, 53, 211, 0.15);
+}
+
+.steps-input:focus {
+  border-color: rgb(0, 53, 211);
+  box-shadow: 0 0 8px rgba(0, 53, 211, 0.3);
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: rgb(166, 188, 255);
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+  accent-color: rgb(0, 154, 250);
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: all 0.2s ease;
+}
+
+footer {
+  background: rgba(56, 61, 226, 0.95);
+  color: white;
+  font-size: 1.2em;
+  padding: 30px;
+  margin-top: 50px;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+footer h2,
+footer h3 {
+  margin-bottom: 10px;
+}
+
+.about-app {
+  width: 100%;
+  margin: 0 auto 30px auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.about-app h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.about-app p {
+  text-align: justify;
+  line-height: 1.7;
+  font-size: 1.3rem;
+}
+
+.bottom-panels {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.panel {
+  flex: 1;
+  color: white;
+  background: linear-gradient(135deg, rgb(136, 166, 255), rgb(98, 100, 243));
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  min-width: 250px;
+  min-height: 150px;
+  text-align: center;
+}
+
+.panel h3 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.profile-pic {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  margin: 0 auto 15px auto;
+  display: block;
+  border: 3px solid #1a1aff;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.developer-panel {
+  text-align: center;
+}
+
+.name-box {
+  background: linear-gradient(135deg, #4c6ef5, #1a1aff);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin: 15px auto;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.name-box:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.username {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.rollno {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 4px 0 0 0;
+}
+
+.dev-details {
+  text-align: justify;
+  margin: 20px auto;
+  max-width: 280px;
+  line-height: 1.5;
+}
+
+
+.dev-details {
+  text-align: left;
+  margin: 15px auto;
+  max-width: 260px;
+  white-space: nowrap;
+  line-height: 1.5;
+}
+
+.bio {
+  margin-top: 15px;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .bottom-panels {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .panel {
+    max-width: 90%;
   }
+}
+
+.contact-panel {
+  text-align: center;
+  height: fit-content;
+}
+
+.contact-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.contact-box {
+  flex: 1;
+  min-width: 120px;
+  max-width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, rgb(112, 146, 246), rgb(22, 31, 201));
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.contact-box:hover {
+  transform: scale(1.05);
+  background: rgb(112, 167, 255);
+  transition: all 0.3s ease;
+}
+
+.contact-icon {
+  font-size: 4rem;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.contact-btn {
+  margin-top: auto;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: scale(1.1);
+  color: rgba(0, 0, 0, 0.675);
+  background: rgba(255, 255, 255, 0.368);
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.email-text {
+  margin-top: 20px;
+  font-size: 1em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
