@@ -97,6 +97,15 @@ Additionally, the app features a **modern UI** with gradient styling and a **foo
 
 ---
 
+## Screenshots  
+
+### App Interface  
+![Counter App Screenshot1](./assets/Screenshot1.png)
+![Counter App Screenshot2](./assets/Screenshot2.png)
+![Counter App Screenshot3](./assets/Screenshot3.png)
+
+---
+
 ## 🏁 Conclusion
 This Counter App successfully demonstrates the core concepts of **React state management, event handling, and conditional rendering** in a practical way.  
 
